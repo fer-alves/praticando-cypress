@@ -7,7 +7,7 @@ const elementos = {
       register : '#btnRegister'
   },
   campos : {
-      nome  : '#use',
+      nome  : '#user',
       email : '#email',
       senha : '#password',
 

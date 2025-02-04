@@ -12,7 +12,7 @@ jobs:
   #só teremos um job: rodar os testes
   cypress-run:
     #maquina que sera executada
-    runs-on: windows-latest
+    runs-on: windows-2019
     
     #passo a passo para rodar os testes
     steps:
@@ -31,3 +31,4 @@ jobs:
           record: true
           env:
             CYPRESS_RECORD_KEY:${{ secrets.CYPRESS_RECORD_KEY }}
+            
