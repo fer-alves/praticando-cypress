@@ -8,19 +8,18 @@ on:
       - master
 
 jobs:
-  #o que vai ser feito nessa pipeline
-  #só teremos um job: rodar os testes
+  
   cypress-run:
-    #maquina que sera executada
+    
     runs-on: ubuntu-latest
     
-    #passo a passo para rodar os testes
+    
     steps:
-      #clone do projeto
+      
       - name: Checkout repository/Clone do projeto
         uses: actions/checkout@v3
         
-        #execução e configuração do projeto 
+        
       - name: Run Testes
         run: npm install
         
