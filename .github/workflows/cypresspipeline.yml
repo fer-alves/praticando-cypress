@@ -20,11 +20,11 @@ jobs:
       - name: Checkout repository/Clone do projeto
         uses: actions/checkout@v3
         
-      #exemplo de execução no terminal  
+        #execução e configuração do projeto 
       - name: Run Testes
         run: npm install
         
-      #execução e configuração do projeto
+     
       - name: Run Testes
         uses: cypress-io/github-action@v5
         with: 
