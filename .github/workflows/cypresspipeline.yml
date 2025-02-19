@@ -1,39 +1,32 @@
-#nome da pipeline
+# Nome da pipeline
 name: Testes Pipelines
 
-# em que momento sera executada
+# Quando será executada
 on:
   pull_request:
     branches:
-      - master
+      - main  # Alterado de master para main
 
 jobs:
-  
   cypress-run:
-    
     runs-on: ubuntu-latest
-    
-    
+
     steps:
-      
       - name: Checkout repository/Clone do projeto
         uses: actions/checkout@v3
-        
-        
-      - name: Run Testes
-        run: npm install
-        
-     
+
+      - name: Install dependencies
+        run: npm ci
+
       - name: Run Testes
         uses: cypress-io/github-action@v5
         with: 
           record: true
-          env:
-            CYPRESS_RECORD_KEY:${{ secrets.CYPRESS_RECORD_KEY }}
-            
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
 
-      - name: Upload Raletório
+      - name: Upload Relatório
         uses: actions/upload-artifact@v4
         with: 
           name: Relatório
-          path: cypress/report/html      
+          path: cypress/report/html
