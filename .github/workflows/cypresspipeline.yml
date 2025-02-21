@@ -24,13 +24,13 @@ jobs:
       - name: Run Testes
         run: npm install
         
-     
-      - name: Run Testes
+        - name: Run Testes
         uses: cypress-io/github-action@v5
         with: 
           record: true
-          env:
-            CYPRESS_RECORD_KEY:${{ secrets.CYPRESS_RECORD_KEY }}
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+
             
 
       - name: Upload Relatório
