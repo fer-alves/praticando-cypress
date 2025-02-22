@@ -8,10 +8,10 @@ module.exports = defineConfig({
       charts: true, // Ativa gráficos no relatório
       reportTitle: "Projeto inicial", // Título do relatório
       reportPageTitle: "Projeto inicial", // Título da página do relatório
-      reportDir: "cypress/report", // Diretório onde o relatório será gerado
+      reportDir: "cypress/reports/html", // Agora o diretório está correto
       overwrite: true, // Permite sobrescrever relatórios antigos
-      html: false, // Define se o relatório gerado será no formato HTML
-      json: true, // Define se o relatório será gerado no formato JSON
+      html: true, // ATIVA a geração do relatório HTML
+      json: true, // Mantém a geração do JSON
     },
     baseUrl: "https://automationpratice.com.br/",
     defaultCommandTimeout: 5000,
