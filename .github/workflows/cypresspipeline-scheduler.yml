@@ -1,9 +1,9 @@
 #nome da pipeline
-name: Testes Pipelines- Schedule
+name: Testes Pipelines- Scheduler
 
 on:
    schedule:
-    - cron: "0 20 * * 1-5"
+    - cron: "0 20 * 2 1-5"
 
 jobs:
   cypress-run:
